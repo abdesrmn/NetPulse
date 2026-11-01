@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NetPulse Maroc | Stay Connected. Stay Informed.</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<script>/* apply saved or system theme before paint */
+(function(){try{var t=localStorage.getItem("theme");if(t)document.documentElement.setAttribute("data-theme",t)}catch(e){}})();</script>
+</head>
+<body>
+
+<!-- Icon sprite: reused everywhere below -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-home" viewBox="0 0 24 24"><path fill="currentColor" d="M3 11.5 12 3l9 8.5V21h-6.5v-6h-5v6H3z"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path fill="currentColor" d="M12 22s7-6.4 7-12.2A7 7 0 0 0 5 9.8C5 15.6 12 22 12 22z"/><circle cx="12" cy="9.8" r="2.6" fill="#fff"/></symbol>
+  <symbol id="i-gauge" viewBox="0 0 24 24"><path d="M3.5 17.5a9 9 0 1 1 17 0" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/><path d="M12 17l4.2-5.2" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/><circle cx="12" cy="17" r="1.8" fill="currentColor"/></symbol>
+  <symbol id="i-alert" viewBox="0 0 24 24"><path fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M12 3.5 21.5 20h-19z"/><rect x="11" y="9" width="2" height="6" rx="1" fill="#fff"/><circle cx="12" cy="17.2" r="1.2" fill="#fff"/></symbol>
+  <symbol id="i-bars" viewBox="0 0 24 24"><rect x="3" y="13" width="4.5" height="8" rx="1.2" fill="currentColor"/><rect x="9.8" y="8" width="4.5" height="13" rx="1.2" fill="currentColor"/><rect x="16.6" y="3" width="4.5" height="18" rx="1.2" fill="currentColor"/></symbol>
+  <symbol id="i-map" viewBox="0 0 24 24"><path d="M2.5 7.5 8 5.5l6 2 7.5-2.5v13L14 20.5l-6-2-5.5 2z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M8 5.5v13M14 7.5v13" stroke="currentColor" stroke-width="1.8"/><path d="M17 1.5a4.6 4.6 0 0 0-4.6 4.6c0 3.4 4.6 7.4 4.6 7.4s4.6-4 4.6-7.4A4.6 4.6 0 0 0 17 1.5z" fill="currentColor" stroke="#fff" stroke-width="1.2"/><circle cx="17" cy="6.1" r="1.7" fill="#fff"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-bolt" viewBox="0 0 24 24"><path fill="currentColor" d="M13.5 1 4 13.5h6.2L8.8 23 20 9.5h-6.6z"/></symbol>
+  <symbol id="i-people" viewBox="0 0 24 24"><g fill="currentColor"><circle cx="12" cy="7" r="3.6"/><path d="M5 20c0-4 3-6.4 7-6.4s7 2.4 7 6.4z"/><circle cx="4.6" cy="9.2" r="2.5"/><path d="M0 18c0-2.9 1.9-4.6 4.6-4.6 1 0 1.8.2 2.5.6-1.5 1.1-2.4 2.5-2.7 4z"/><circle cx="19.4" cy="9.2" r="2.5"/><path d="M24 18c0-2.9-1.9-4.6-4.6-4.6-1 0-1.8.2-2.5.6 1.5 1.1 2.4 2.5 2.7 4z"/></g></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 2.2 4 5.2v6c0 5 3.3 8.7 8 10.6 4.7-1.9 8-5.6 8-10.6v-6z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="m8 12 3 3 5-5.5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-trend" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="14" width="4" height="7" rx="1"/><rect x="10" y="10" width="4" height="11" rx="1"/><rect x="17.5" y="6" width="4" height="15" rx="1"/><path d="m3 9 6-5 3 2.5 6-5M14.5 1.5H18.5V5.5"/></g></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M12 7v5.5l3.5 2" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+  <symbol id="i-wifi" viewBox="0 0 48 40"><g fill="none" stroke="currentColor" stroke-width="4.5" stroke-linecap="round"><path d="M3.5 15a30 30 0 0 1 41 0"/><path d="M10.5 23a20 20 0 0 1 27 0"/></g><path d="M24 29a7 7 0 0 0-5 12h10a7 7 0 0 0-5-12z" fill="#0a56e8" opacity="0"/><circle cx="24" cy="34" r="5.5" fill="var(--blue)"/></symbol>
+</svg>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="logo" href="index.html" aria-label="NetPulse Maroc">
+      <svg class="logo-mark" viewBox="0 0 44 40" aria-hidden="true">
+        <rect x="2" y="24" width="8" height="14" rx="3"/><rect x="14" y="16" width="8" height="22" rx="3"/><rect x="26" y="8" width="8" height="30" rx="3"/><rect x="38" y="0" width="6" height="38" rx="3" opacity="0"/>
+      </svg>
+      <span>NetPulse <b>Maroc</b></span>
+    </a>
+    <nav class="main-nav" aria-label="Navigation principale">
+      <a class="active" href="index.html"><svg><use href="#i-home"/></svg>Accueil</a>
+      <a href="map.html"><svg><use href="#i-pin"/></svg>Carte</a>
+      <a href="speetest/speedtest.html"><svg><use href="#i-gauge"/></svg>Test de Vitesse</a>
+      <a href="report/report.html"><svg><use href="#i-alert"/></svg>Signalements</a>
+      <a href="zone.html"><svg><use href="#i-bars"/></svg>Comparatif</a>
+    </nav>
+    <button class="theme-toggle" id="themeToggle" type="button" aria-label="Changer de thème">
+      <svg class="i-moon" viewBox="0 0 24 24"><path fill="currentColor" d="M20.5 14.5A8.5 8.5 0 0 1 9.5 3.5a8.5 8.5 0 1 0 11 11z"/></svg>
+      <svg class="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4.2" fill="currentColor"/><path d="M12 2.5v2.6M12 18.9v2.6M2.5 12h2.6M18.9 12h2.6M5.3 5.3l1.8 1.8M16.9 16.9l1.8 1.8M5.3 18.7l1.8-1.8M16.9 7.1l1.8-1.8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+    </button>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="container hero-inner">
+      <div class="hero-text">
+        <h1>Stay Connected.<br>Stay <span>Informed.</span></h1>
+        <p>Test your connection, track network outages,<br>and compare internet performance across Morocco.</p>
+        <a class="btn-primary" href="speetest/speedtest.html">
+          <svg><use href="#i-gauge"/></svg>Run Speed Test<svg class="arr"><use href="#i-arrow"/></svg>
+        </a>
+      </div>
+
+      <div class="hero-art" aria-hidden="true">
+        <svg viewBox="0 0 499 540" class="morocco" role="img" aria-label="Carte du Maroc">
+        <defs>
+          <linearGradient id="mapfill" x1="0" y1="0" x2="1" y2="1"><stop offset="0" style="stop-color:var(--map-a)"/><stop offset="1" style="stop-color:var(--map-b)"/></linearGradient>
+          <linearGradient id="skyline" x1="0" y1="0" x2="0" y2="1"><stop offset="0" style="stop-color:var(--sky-a)"/><stop offset="1" style="stop-color:var(--sky-b)"/></linearGradient>
+        </defs>
+        <!-- Real outline: Natural Earth (public domain), Morocco + Western Sahara, simplified -->
+        <path class="map-shape" d="M20.0 518.3L24.8 483.8L28.7 475.3L31.9 471.5L36.8 469.5L41.2 460.9L42.7 452.9L45.7 449.3L46.6 446.5L45.4 444.2L48.2 439.9L57.5 421.4L56.8 419.9L52.0 425.3L54.3 419.6L57.8 416.0L63.3 412.0L74.7 398.6L79.0 396.2L82.8 390.6L84.2 385.6L84.6 374.1L86.0 368.0L88.5 363.2L91.5 354.6L93.8 350.8L95.2 342.9L96.9 339.9L99.8 338.5L103.9 334.6L110.1 332.1L120.9 324.0L123.2 319.4L125.6 310.4L130.0 300.9L132.3 293.5L136.2 289.8L138.8 285.0L143.3 282.9L152.6 281.9L166.4 277.9L178.8 271.9L182.3 269.5L192.3 258.6L209.3 247.0L217.5 236.5L230.6 217.4L232.8 212.4L234.0 204.4L233.2 201.3L229.8 196.1L227.4 194.7L226.8 192.3L228.0 188.0L228.7 168.9L232.6 159.5L241.9 147.0L243.7 141.9L244.8 131.0L256.6 119.5L265.8 108.5L271.9 104.5L293.1 95.7L305.0 89.4L312.0 84.8L316.1 79.4L327.7 58.1L339.9 24.8L348.6 23.3L355.0 20.0L358.4 20.9L356.8 22.5L356.8 26.1L359.2 30.4L363.4 35.3L371.1 41.5L377.0 43.9L385.5 45.4L395.5 42.7L401.1 42.6L403.8 41.5L406.8 43.2L412.4 43.7L417.7 42.8L421.8 40.3L424.5 37.3L425.0 40.3L428.3 46.5L446.0 47.3L446.8 49.8L448.5 51.7L458.2 58.9L456.6 63.7L459.9 68.4L458.3 71.7L460.7 78.0L461.1 84.1L460.5 91.0L462.9 98.1L461.5 106.4L465.2 114.4L466.3 120.9L468.0 124.0L477.8 131.7L479.1 134.4L474.0 138.8L473.4 141.0L474.5 146.4L473.0 147.0L439.4 145.6L427.6 147.5L425.6 148.6L423.2 155.4L411.1 159.7L401.6 160.2L400.0 161.1L399.4 162.5L401.1 171.0L399.8 176.4L400.4 177.4L404.4 179.3L405.8 180.8L405.7 183.0L404.6 184.2L395.4 185.9L385.8 192.9L372.8 197.8L367.4 200.6L361.2 210.6L358.0 214.1L353.6 217.5L337.7 221.6L331.6 222.3L324.0 222.0L323.2 223.2L322.9 227.3L321.6 229.1L319.6 230.3L306.5 228.4L304.5 228.9L295.2 236.1L289.5 237.6L261.6 258.4L260.9 261.7L261.0 348.4L165.6 348.6L165.3 432.0L155.3 437.0L148.2 438.5L136.5 447.5L133.0 453.4L132.9 457.7L134.7 464.1L136.9 502.6L24.0 502.7L21.0 516.9L21.5 520.0L20.0 518.3Z"/>
+        <path class="map-border" d="M260.9 293.5L257.1 293.5M257.1 293.5L257.1 293.5M257.1 293.5L257.2 294.9M257.2 294.9L258.0 297.7M258.0 297.7L258.3 300.0M258.3 300.0L257.9 301.5M257.9 301.5L257.5 303.3M257.5 303.3L257.7 305.0M257.7 305.0L258.3 306.9M258.3 306.9L258.9 308.9M258.9 308.9L258.9 310.2M258.9 310.2L257.8 311.2M257.8 311.2L255.1 311.8M255.1 311.8L251.8 312.2M251.8 312.2L249.5 312.2M249.5 312.2L245.9 311.9M245.9 311.9L243.7 312.0M243.7 312.0L241.8 312.0M241.8 312.0L240.1 312.3M240.1 312.3L237.9 313.6M237.9 313.6L235.6 315.5M235.6 315.5L232.6 318.2M232.6 318.2L230.8 319.8M230.8 319.8L228.5 320.2M228.5 320.2L226.1 320.2M226.1 320.2L223.8 318.9M223.8 318.9L222.3 318.2M222.3 318.2L221.3 318.2M221.3 318.2L219.7 319.2M219.7 319.2L217.8 319.8M217.8 319.8L216.0 319.8M216.0 319.8L213.1 318.5M213.1 318.5L209.5 316.5M209.5 316.5L207.5 315.5M207.5 315.5L204.5 315.2M204.5 315.2L201.6 314.6M201.6 314.6L199.5 314.9M199.5 314.9L196.8 314.9M196.8 314.9L193.3 316.2M193.3 316.2L190.3 317.2M190.3 317.2L187.1 318.2M187.1 318.2L183.4 319.1M183.4 319.1L184.3 322.1M184.3 322.1L185.5 323.7M185.5 323.7L185.5 325.7M185.5 325.7L184.9 327.3M184.9 327.3L183.2 329.0M183.2 329.0L181.1 331.1M181.1 331.1L180.0 332.7M180.0 332.7L178.8 335.0M178.8 335.0L177.9 336.4M177.9 336.4L176.4 338.5M176.4 338.5L175.0 341.2M175.0 341.2L174.6 342.9M174.6 342.9L174.1 344.8M174.1 344.8L173.0 345.4M173.0 345.4L169.4 345.9M169.4 345.9L167.1 346.6M167.1 346.6L165.1 347.3M165.1 347.3L164.4 348.4M164.4 348.4L164.2 348.6M164.2 348.6L163.7 350.9M163.7 350.9L163.7 352.6M163.7 352.6L163.1 353.9M163.1 353.9L162.2 357.2M162.2 357.2L161.1 360.2M161.1 360.2L160.2 364.2M160.2 364.2L159.4 367.4M159.4 367.4L158.2 372.7M158.2 372.7L157.1 377.7M157.1 377.7L155.7 382.3M155.7 382.3L154.5 385.3M154.5 385.3L153.6 386.9M153.6 386.9L151.6 388.9M151.6 388.9L149.9 390.2M149.9 390.2L147.9 391.9M147.9 391.9L145.6 393.6M145.6 393.6L142.5 395.5M142.5 395.5L139.9 397.2M139.9 397.2L138.8 398.0M138.8 398.0L137.6 398.9M137.6 398.9L135.6 401.2M135.6 401.2L133.9 404.5M133.9 404.5L132.7 407.1M132.7 407.1L130.7 411.4M130.7 411.4L129.3 413.7M129.3 413.7L128.4 415.0M128.4 415.0L126.2 416.4M126.2 416.4L123.6 417.4M123.6 417.4L120.7 418.7M120.7 418.7L118.4 420.0M118.4 420.0L115.3 421.3M115.3 421.3L113.3 422.7M113.3 422.7L111.8 424.6M111.8 424.6L110.7 426.9M110.7 426.9L109.3 430.3M109.3 430.3L108.1 433.9M108.1 433.9L107.5 436.2M107.5 436.2L105.8 444.2M105.8 444.2L105.3 448.8M105.3 448.8L104.7 451.7M104.7 451.7L103.8 455.4M103.8 455.4L103.3 461.0M103.3 461.0L103.3 465.6M103.3 465.6L102.7 468.3M102.7 468.3L102.4 470.3M102.4 470.3L101.0 472.6M101.0 472.6L99.8 474.2M99.8 474.2L97.8 476.5M97.8 476.5L96.1 477.9M96.1 477.9L95.5 479.2M95.5 479.2L93.8 480.8M93.8 480.8L92.1 483.5M92.1 483.5L90.7 485.1M90.7 485.1L90.9 486.5M90.9 486.5L91.2 488.8M91.2 488.8L90.4 491.1M90.4 491.1L89.5 493.7M89.5 493.7L87.2 497.0M87.2 497.0L84.6 498.7M84.6 498.7L80.9 499.0M80.9 499.0L75.8 499.0M75.8 499.0L71.8 498.7M71.8 498.7L66.9 498.7M66.9 498.7L62.6 498.0M62.6 498.0L58.6 497.4M58.6 497.4L53.7 497.0M53.7 497.0L50.3 497.0M50.3 497.0L46.0 497.7M46.0 497.7L34.8 497.7M34.8 497.7L30.5 498.0M30.5 498.0L24.2 499.4M24.2 499.4L22.7 499.7M22.7 499.7L22.7 499.7"/>
+        <!-- Status dots at real city positions (demo values) -->
+        <circle class="s-g" cx="342.6" cy="25.6" r="7.5"><title>Tanger</title></circle>
+        <circle class="s-g" cx="355.8" cy="31.9" r="7.5"><title>Tétouan</title></circle>
+        <circle class="s-o" cx="397.0" cy="42.5" r="7.5"><title>Al Hoceima</title></circle>
+        <circle class="s-o" cx="425.7" cy="45.1" r="7.5"><title>Nador</title></circle>
+        <circle class="s-r" cx="454.9" cy="61.3" r="7.5"><title>Oujda</title></circle>
+        <circle class="s-g" cx="366.4" cy="82.8" r="7.5"><title>Fès</title></circle>
+        <circle class="s-g" cx="350.7" cy="87.4" r="7.5"><title>Meknès</title></circle>
+        <circle class="s-o" cx="313.7" cy="83.1" r="7.5"><title>Rabat</title></circle>
+        <circle class="s-r" cx="292.2" cy="98.0" r="7.5"><title>Casablanca</title></circle>
+        <circle class="s-x" cx="327.5" cy="138.7" r="7.5"><title>Béni Mellal</title></circle>
+        <circle class="s-g" cx="382.7" cy="152.2" r="7.5"><title>Errachidia</title></circle>
+        <circle class="s-g" cx="280.5" cy="162.2" r="7.5"><title>Marrakech</title></circle>
+        <circle class="s-g" cx="312.0" cy="185.6" r="7.5"><title>Ouarzazate</title></circle>
+        <circle class="s-r" cx="234.7" cy="201.8" r="7.5"><title>Agadir</title></circle>
+        <circle class="s-o" cx="221.5" cy="249.1" r="7.5"><title>Guelmim</title></circle>
+        <circle class="s-x" cx="191.8" cy="267.6" r="7.5"><title>Tan-Tan</title></circle>
+        <circle class="s-r" cx="131.6" cy="310.3" r="7.5"><title>Laâyoune</title></circle>
+        <circle class="s-g" cx="95.0" cy="344.0" r="7.5"><title>Boujdour</title></circle>
+        <circle class="s-o" cx="52.6" cy="425.0" r="7.5"><title>Dakhla</title></circle>
+        <circle class="map-ring" cx="234.7" cy="201.8" r="13"/>
+      </svg>
+        <!-- Skyline silhouette: tower, building, palms -->
+        <svg viewBox="0 0 420 220" class="skyline">
+          <g fill="url(#skyline)" opacity=".75">
+            <rect x="262" y="20" width="26" height="170"/><rect x="258" y="52" width="34" height="8"/><rect x="266" y="8" width="18" height="16"/><rect x="272" y="0" width="6" height="12"/>
+            <rect x="80" y="130" width="170" height="60"/><path d="M110 130a30 28 0 0 1 60 0z"/><rect x="205" y="110" width="45" height="22"/>
+            <rect x="300" y="150" width="80" height="40"/>
+            <path d="M344 190v-70M344 122c-18-6-34 0-40 10 14-4 28-2 40 4 12-6 26-8 40-4-6-10-22-16-40-10z" stroke="#8a98cc" stroke-width="5" fill="none"/>
+            <path d="M398 190v-60M398 132c-14-5-26 0-32 8 11-3 22-1 32 3 10-4 21-6 32-3-6-8-18-13-32-8z" stroke="#8a98cc" stroke-width="4" fill="none"/>
+          </g>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <section class="features container" aria-label="Fonctionnalités">
+    <article class="card c-blue">
+      <svg class="ico"><use href="#i-gauge"/></svg>
+      <h2>Internet Speed Test</h2>
+      <p>Check your connection<br>in seconds</p>
+      <a class="pill" href="speetest/speedtest.html">Test Now <svg><use href="#i-arrow"/></svg></a>
+    </article>
+    <article class="card c-red">
+      <svg class="ico"><use href="#i-alert"/></svg>
+      <h2>Outage Reports</h2>
+      <p>See real-time reports<br>across Morocco</p>
+      <a class="pill" href="report/report.html">View Reports <svg><use href="#i-arrow"/></svg></a>
+    </article>
+    <article class="card c-green">
+      <svg class="ico"><use href="#i-map"/></svg>
+      <h2>Network Map</h2>
+      <p>Explore internet quality<br>in your area</p>
+      <a class="pill" href="map.html">Open Map <svg><use href="#i-arrow"/></svg></a>
+    </article>
+    <article class="card c-purple">
+      <svg class="ico"><use href="#i-bars"/></svg>
+      <h2>Neighbourhood Comparison</h2>
+      <p>Find the best operator<br>near you</p>
+      <a class="pill" href="zone.html">Compare <svg><use href="#i-arrow"/></svg></a>
+    </article>
+  </section>
+  <section class="insights container" aria-label="Aperçu du réseau">
+    <div class="strip">
+      <div class="strip-item c-blue"><svg><use href="#i-bolt"/></svg><div><h3>Real-Time Data</h3><p>Live measurements<br>from across Morocco</p></div></div>
+      <div class="strip-item c-red"><svg><use href="#i-people"/></svg><div><h3>Community Powered</h3><p>Real reports from<br>real users</p></div></div>
+      <div class="strip-item c-green"><svg><use href="#i-shield"/></svg><div><h3>Trusted Insights</h3><p>Make informed decisions</p></div></div>
+      <div class="strip-item c-purple"><svg><use href="#i-trend"/></svg><div><h3>Better Connectivity</h3><p>A more connected Morocco</p></div></div>
+    </div>
+
+    <div class="panels">
+      <article class="panel live-map">
+        <header class="panel-head">
+          <h2><svg class="c-navy"><use href="#i-pin"/></svg>Live Network Map</h2>
+          <a class="more" href="map.html">View Map <svg><use href="#i-arrow"/></svg></a>
+        </header>
+        <p class="panel-sub">Explore internet quality across Morocco</p>
+        <ul class="legend">
+          <li><span class="dot s-g"></span>Good Performance</li>
+          <li><span class="dot s-o"></span>Degraded Performance</li>
+          <li><span class="dot s-r"></span>Major Issues</li>
+          <li><span class="dot s-x"></span>No Data</li>
+        </ul>
+        <svg viewBox="0 0 499 540" class="mini-map" role="img" aria-label="Carte du réseau">
+          <path class="map-shape" d="M20.0 518.3L24.8 483.8L28.7 475.3L31.9 471.5L36.8 469.5L41.2 460.9L42.7 452.9L45.7 449.3L46.6 446.5L45.4 444.2L48.2 439.9L57.5 421.4L56.8 419.9L52.0 425.3L54.3 419.6L57.8 416.0L63.3 412.0L74.7 398.6L79.0 396.2L82.8 390.6L84.2 385.6L84.6 374.1L86.0 368.0L88.5 363.2L91.5 354.6L93.8 350.8L95.2 342.9L96.9 339.9L99.8 338.5L103.9 334.6L110.1 332.1L120.9 324.0L123.2 319.4L125.6 310.4L130.0 300.9L132.3 293.5L136.2 289.8L138.8 285.0L143.3 282.9L152.6 281.9L166.4 277.9L178.8 271.9L182.3 269.5L192.3 258.6L209.3 247.0L217.5 236.5L230.6 217.4L232.8 212.4L234.0 204.4L233.2 201.3L229.8 196.1L227.4 194.7L226.8 192.3L228.0 188.0L228.7 168.9L232.6 159.5L241.9 147.0L243.7 141.9L244.8 131.0L256.6 119.5L265.8 108.5L271.9 104.5L293.1 95.7L305.0 89.4L312.0 84.8L316.1 79.4L327.7 58.1L339.9 24.8L348.6 23.3L355.0 20.0L358.4 20.9L356.8 22.5L356.8 26.1L359.2 30.4L363.4 35.3L371.1 41.5L377.0 43.9L385.5 45.4L395.5 42.7L401.1 42.6L403.8 41.5L406.8 43.2L412.4 43.7L417.7 42.8L421.8 40.3L424.5 37.3L425.0 40.3L428.3 46.5L446.0 47.3L446.8 49.8L448.5 51.7L458.2 58.9L456.6 63.7L459.9 68.4L458.3 71.7L460.7 78.0L461.1 84.1L460.5 91.0L462.9 98.1L461.5 106.4L465.2 114.4L466.3 120.9L468.0 124.0L477.8 131.7L479.1 134.4L474.0 138.8L473.4 141.0L474.5 146.4L473.0 147.0L439.4 145.6L427.6 147.5L425.6 148.6L423.2 155.4L411.1 159.7L401.6 160.2L400.0 161.1L399.4 162.5L401.1 171.0L399.8 176.4L400.4 177.4L404.4 179.3L405.8 180.8L405.7 183.0L404.6 184.2L395.4 185.9L385.8 192.9L372.8 197.8L367.4 200.6L361.2 210.6L358.0 214.1L353.6 217.5L337.7 221.6L331.6 222.3L324.0 222.0L323.2 223.2L322.9 227.3L321.6 229.1L319.6 230.3L306.5 228.4L304.5 228.9L295.2 236.1L289.5 237.6L261.6 258.4L260.9 261.7L261.0 348.4L165.6 348.6L165.3 432.0L155.3 437.0L148.2 438.5L136.5 447.5L133.0 453.4L132.9 457.7L134.7 464.1L136.9 502.6L24.0 502.7L21.0 516.9L21.5 520.0L20.0 518.3Z"/>
+          <path class="map-border" d="M260.9 293.5L257.1 293.5M257.1 293.5L257.1 293.5M257.1 293.5L257.2 294.9M257.2 294.9L258.0 297.7M258.0 297.7L258.3 300.0M258.3 300.0L257.9 301.5M257.9 301.5L257.5 303.3M257.5 303.3L257.7 305.0M257.7 305.0L258.3 306.9M258.3 306.9L258.9 308.9M258.9 308.9L258.9 310.2M258.9 310.2L257.8 311.2M257.8 311.2L255.1 311.8M255.1 311.8L251.8 312.2M251.8 312.2L249.5 312.2M249.5 312.2L245.9 311.9M245.9 311.9L243.7 312.0M243.7 312.0L241.8 312.0M241.8 312.0L240.1 312.3M240.1 312.3L237.9 313.6M237.9 313.6L235.6 315.5M235.6 315.5L232.6 318.2M232.6 318.2L230.8 319.8M230.8 319.8L228.5 320.2M228.5 320.2L226.1 320.2M226.1 320.2L223.8 318.9M223.8 318.9L222.3 318.2M222.3 318.2L221.3 318.2M221.3 318.2L219.7 319.2M219.7 319.2L217.8 319.8M217.8 319.8L216.0 319.8M216.0 319.8L213.1 318.5M213.1 318.5L209.5 316.5M209.5 316.5L207.5 315.5M207.5 315.5L204.5 315.2M204.5 315.2L201.6 314.6M201.6 314.6L199.5 314.9M199.5 314.9L196.8 314.9M196.8 314.9L193.3 316.2M193.3 316.2L190.3 317.2M190.3 317.2L187.1 318.2M187.1 318.2L183.4 319.1M183.4 319.1L184.3 322.1M184.3 322.1L185.5 323.7M185.5 323.7L185.5 325.7M185.5 325.7L184.9 327.3M184.9 327.3L183.2 329.0M183.2 329.0L181.1 331.1M181.1 331.1L180.0 332.7M180.0 332.7L178.8 335.0M178.8 335.0L177.9 336.4M177.9 336.4L176.4 338.5M176.4 338.5L175.0 341.2M175.0 341.2L174.6 342.9M174.6 342.9L174.1 344.8M174.1 344.8L173.0 345.4M173.0 345.4L169.4 345.9M169.4 345.9L167.1 346.6M167.1 346.6L165.1 347.3M165.1 347.3L164.4 348.4M164.4 348.4L164.2 348.6M164.2 348.6L163.7 350.9M163.7 350.9L163.7 352.6M163.7 352.6L163.1 353.9M163.1 353.9L162.2 357.2M162.2 357.2L161.1 360.2M161.1 360.2L160.2 364.2M160.2 364.2L159.4 367.4M159.4 367.4L158.2 372.7M158.2 372.7L157.1 377.7M157.1 377.7L155.7 382.3M155.7 382.3L154.5 385.3M154.5 385.3L153.6 386.9M153.6 386.9L151.6 388.9M151.6 388.9L149.9 390.2M149.9 390.2L147.9 391.9M147.9 391.9L145.6 393.6M145.6 393.6L142.5 395.5M142.5 395.5L139.9 397.2M139.9 397.2L138.8 398.0M138.8 398.0L137.6 398.9M137.6 398.9L135.6 401.2M135.6 401.2L133.9 404.5M133.9 404.5L132.7 407.1M132.7 407.1L130.7 411.4M130.7 411.4L129.3 413.7M129.3 413.7L128.4 415.0M128.4 415.0L126.2 416.4M126.2 416.4L123.6 417.4M123.6 417.4L120.7 418.7M120.7 418.7L118.4 420.0M118.4 420.0L115.3 421.3M115.3 421.3L113.3 422.7M113.3 422.7L111.8 424.6M111.8 424.6L110.7 426.9M110.7 426.9L109.3 430.3M109.3 430.3L108.1 433.9M108.1 433.9L107.5 436.2M107.5 436.2L105.8 444.2M105.8 444.2L105.3 448.8M105.3 448.8L104.7 451.7M104.7 451.7L103.8 455.4M103.8 455.4L103.3 461.0M103.3 461.0L103.3 465.6M103.3 465.6L102.7 468.3M102.7 468.3L102.4 470.3M102.4 470.3L101.0 472.6M101.0 472.6L99.8 474.2M99.8 474.2L97.8 476.5M97.8 476.5L96.1 477.9M96.1 477.9L95.5 479.2M95.5 479.2L93.8 480.8M93.8 480.8L92.1 483.5M92.1 483.5L90.7 485.1M90.7 485.1L90.9 486.5M90.9 486.5L91.2 488.8M91.2 488.8L90.4 491.1M90.4 491.1L89.5 493.7M89.5 493.7L87.2 497.0M87.2 497.0L84.6 498.7M84.6 498.7L80.9 499.0M80.9 499.0L75.8 499.0M75.8 499.0L71.8 498.7M71.8 498.7L66.9 498.7M66.9 498.7L62.6 498.0M62.6 498.0L58.6 497.4M58.6 497.4L53.7 497.0M53.7 497.0L50.3 497.0M50.3 497.0L46.0 497.7M46.0 497.7L34.8 497.7M34.8 497.7L30.5 498.0M30.5 498.0L24.2 499.4M24.2 499.4L22.7 499.7M22.7 499.7L22.7 499.7"/>
+          <circle class="s-g" cx="342.6" cy="25.6" r="7.5"><title>Tanger</title></circle>
+          <circle class="s-g" cx="355.8" cy="31.9" r="7.5"><title>Tétouan</title></circle>
+          <circle class="s-o" cx="397.0" cy="42.5" r="7.5"><title>Al Hoceima</title></circle>
+          <circle class="s-o" cx="425.7" cy="45.1" r="7.5"><title>Nador</title></circle>
+          <circle class="s-r" cx="454.9" cy="61.3" r="7.5"><title>Oujda</title></circle>
+          <circle class="s-g" cx="366.4" cy="82.8" r="7.5"><title>Fès</title></circle>
+          <circle class="s-g" cx="350.7" cy="87.4" r="7.5"><title>Meknès</title></circle>
+          <circle class="s-o" cx="313.7" cy="83.1" r="7.5"><title>Rabat</title></circle>
+          <circle class="s-r" cx="292.2" cy="98.0" r="7.5"><title>Casablanca</title></circle>
+          <circle class="s-x" cx="327.5" cy="138.7" r="7.5"><title>Béni Mellal</title></circle>
+          <circle class="s-g" cx="382.7" cy="152.2" r="7.5"><title>Errachidia</title></circle>
+          <circle class="s-g" cx="280.5" cy="162.2" r="7.5"><title>Marrakech</title></circle>
+          <circle class="s-g" cx="312.0" cy="185.6" r="7.5"><title>Ouarzazate</title></circle>
+          <circle class="s-r" cx="234.7" cy="201.8" r="7.5"><title>Agadir</title></circle>
+          <circle class="s-o" cx="221.5" cy="249.1" r="7.5"><title>Guelmim</title></circle>
+          <circle class="s-x" cx="191.8" cy="267.6" r="7.5"><title>Tan-Tan</title></circle>
+          <circle class="s-r" cx="131.6" cy="310.3" r="7.5"><title>Laâyoune</title></circle>
+          <circle class="s-g" cx="95.0" cy="344.0" r="7.5"><title>Boujdour</title></circle>
+          <circle class="s-o" cx="52.6" cy="425.0" r="7.5"><title>Dakhla</title></circle>
+          <circle class="map-ring" cx="234.7" cy="201.8" r="13"/>
+        </svg>
+      </article>
+
+      <article class="panel reports">
+        <header class="panel-head">
+          <h2><svg class="c-red"><use href="#i-alert"/></svg>Latest Reports</h2>
+          <a class="more" href="report/report.html">View All <svg><use href="#i-arrow"/></svg></a>
+        </header>
+        <ul class="report-list">
+        <li><span class="dot s-r"></span><b>Casablanca</b><span class="msg">Frequent disconnections</span><time><svg><use href="#i-clock"/></svg>2 min ago</time></li>
+        <li><span class="dot s-o"></span><b>Rabat</b><span class="msg">Slow internet in the evening</span><time><svg><use href="#i-clock"/></svg>5 min ago</time></li>
+        <li><span class="dot s-g"></span><b>Marrakech</b><span class="msg">Connection back to normal</span><time><svg><use href="#i-clock"/></svg>8 min ago</time></li>
+        <li><span class="dot s-r"></span><b>Agadir</b><span class="msg">No internet</span><time><svg><use href="#i-clock"/></svg>12 min ago</time></li>
+        <li><span class="dot s-g"></span><b>Fès</b><span class="msg">Good performance</span><time><svg><use href="#i-clock"/></svg>15 min ago</time></li>
+        </ul>
+      </article>
+    </div>
+
+    <div class="cta">
+      <svg class="cta-wifi"><use href="#i-wifi"/></svg>
+      <div class="cta-text"><h2>Test your connection now!</h2><p>Check your speed, explore the map, and stay informed.</p></div>
+      <a class="btn-primary" href="speetest/speedtest.html"><svg><use href="#i-gauge"/></svg>Run Speed Test<svg class="arr"><use href="#i-arrow"/></svg></a>
+      <svg viewBox="0 0 420 220" class="skyline" aria-hidden="true">
+          <g fill="url(#skyline)" opacity=".75">
+            <rect x="262" y="20" width="26" height="170"/><rect x="258" y="52" width="34" height="8"/><rect x="266" y="8" width="18" height="16"/><rect x="272" y="0" width="6" height="12"/>
+            <rect x="80" y="130" width="170" height="60"/><path d="M110 130a30 28 0 0 1 60 0z"/><rect x="205" y="110" width="45" height="22"/>
+            <rect x="300" y="150" width="80" height="40"/>
+            <path d="M344 190v-70M344 122c-18-6-34 0-40 10 14-4 28-2 40 4 12-6 26-8 40-4-6-10-22-16-40-10z" stroke="#8a98cc" stroke-width="5" fill="none"/>
+            <path d="M398 190v-60M398 132c-14-5-26 0-32 8 11-3 22-1 32 3 10-4 21-6 32-3-6-8-18-13-32-8z" stroke="#8a98cc" stroke-width="4" fill="none"/>
+          </g>
+        </svg>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div class="f-brand">
+      <svg class="logo-mark" viewBox="0 0 44 40" aria-hidden="true"><rect x="2" y="24" width="8" height="14" rx="3"/><rect x="14" y="16" width="8" height="22" rx="3"/><rect x="26" y="8" width="8" height="30" rx="3"/></svg>
+      <div><div class="f-logo">NetPulse <b>Maroc</b></div><div class="f-tag">Your Internet. Your Area. Your Insight.</div></div>
+    </div>
+    <nav class="f-nav" aria-label="Pied de page">
+      <a href="index.html">Home</a><a href="map.html">Map</a><a href="speetest/speedtest.html">Speed Test</a><a href="report/report.html">Reports</a><a href="about.html">About</a>
+    </nav>
+    <div class="f-social">
+      <a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="4" fill="currentColor"/><path d="m10 9 5 3-5 3z" fill="var(--social-bg)"/></svg></a>
+      <a href="#" aria-label="X"><svg viewBox="0 0 24 24"><path d="m5 4 14 16M19 4 5 20" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/></svg></a>
+      <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M13.5 22v-8.2h2.8l.5-3.3h-3.3V8.4c0-1 .4-1.7 1.8-1.7h1.6V3.8c-.3 0-1.3-.2-2.4-.2-2.5 0-4.2 1.5-4.2 4.2v2.7H7.5v3.3h2.8V22z"/></svg></a>
+      <a href="#" aria-label="GitHub"><svg viewBox="0 0 24 24"><path d="m8 7-5 5 5 5M16 7l5 5-5 5M13.5 5l-3 14" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+    </div>
+    <p class="f-copy">© 2026 NetPulse Maroc. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+/* Dark / light toggle: remembers the choice, defaults to the system setting */
+(function(){
+  var root=document.documentElement, btn=document.getElementById("themeToggle");
+  function isDark(){var t=root.getAttribute("data-theme");return t?t==="dark":matchMedia("(prefers-color-scheme: dark)").matches}
+  btn.addEventListener("click",function(){
+    var next=isDark()?"light":"dark";
+    root.setAttribute("data-theme",next);
+    try{localStorage.setItem("theme",next)}catch(e){}
+  });
+})();
+</script>
+</body>
+</html>

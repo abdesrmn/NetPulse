@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Test de Vitesse | NetPulse Maroc</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="speedtest.css">
+<script>/* apply saved or system theme before paint */
+(function(){try{var t=localStorage.getItem("theme");if(t)document.documentElement.setAttribute("data-theme",t)}catch(e){}})();</script>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-home" viewBox="0 0 24 24"><path fill="currentColor" d="M3 11.5 12 3l9 8.5V21h-6.5v-6h-5v6H3z"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path fill="currentColor" d="M12 22s7-6.4 7-12.2A7 7 0 0 0 5 9.8C5 15.6 12 22 12 22z"/><circle cx="12" cy="9.8" r="2.6" fill="#fff"/></symbol>
+  <symbol id="i-gauge" viewBox="0 0 24 24"><path d="M3.5 17.5a9 9 0 1 1 17 0" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/><path d="M12 17l4.2-5.2" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/><circle cx="12" cy="17" r="1.8" fill="currentColor"/></symbol>
+  <symbol id="i-alert" viewBox="0 0 24 24"><path fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M12 3.5 21.5 20h-19z"/><rect x="11" y="9" width="2" height="6" rx="1" fill="#fff"/><circle cx="12" cy="17.2" r="1.2" fill="#fff"/></symbol>
+  <symbol id="i-bars" viewBox="0 0 24 24"><rect x="3" y="13" width="4.5" height="8" rx="1.2" fill="currentColor"/><rect x="9.8" y="8" width="4.5" height="13" rx="1.2" fill="currentColor"/><rect x="16.6" y="3" width="4.5" height="18" rx="1.2" fill="currentColor"/></symbol>
+  <symbol id="i-map" viewBox="0 0 24 24"><path d="M2.5 7.5 8 5.5l6 2 7.5-2.5v13L14 20.5l-6-2-5.5 2z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M8 5.5v13M14 7.5v13" stroke="currentColor" stroke-width="1.8"/><path d="M17 1.5a4.6 4.6 0 0 0-4.6 4.6c0 3.4 4.6 7.4 4.6 7.4s4.6-4 4.6-7.4A4.6 4.6 0 0 0 17 1.5z" fill="currentColor" stroke="#fff" stroke-width="1.2"/><circle cx="17" cy="6.1" r="1.7" fill="#fff"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-bolt" viewBox="0 0 24 24"><path fill="currentColor" d="M13.5 1 4 13.5h6.2L8.8 23 20 9.5h-6.6z"/></symbol>
+  <symbol id="i-people" viewBox="0 0 24 24"><g fill="currentColor"><circle cx="12" cy="7" r="3.6"/><path d="M5 20c0-4 3-6.4 7-6.4s7 2.4 7 6.4z"/><circle cx="4.6" cy="9.2" r="2.5"/><path d="M0 18c0-2.9 1.9-4.6 4.6-4.6 1 0 1.8.2 2.5.6-1.5 1.1-2.4 2.5-2.7 4z"/><circle cx="19.4" cy="9.2" r="2.5"/><path d="M24 18c0-2.9-1.9-4.6-4.6-4.6-1 0-1.8.2-2.5.6 1.5 1.1 2.4 2.5 2.7 4z"/></g></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 2.2 4 5.2v6c0 5 3.3 8.7 8 10.6 4.7-1.9 8-5.6 8-10.6v-6z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="m8 12 3 3 5-5.5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-trend" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="14" width="4" height="7" rx="1"/><rect x="10" y="10" width="4" height="11" rx="1"/><rect x="17.5" y="6" width="4" height="15" rx="1"/><path d="m3 9 6-5 3 2.5 6-5M14.5 1.5H18.5V5.5"/></g></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M12 7v5.5l3.5 2" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+  <symbol id="i-wifi" viewBox="0 0 48 40"><g fill="none" stroke="currentColor" stroke-width="4.5" stroke-linecap="round"><path d="M3.5 15a30 30 0 0 1 41 0"/><path d="M10.5 23a20 20 0 0 1 27 0"/></g><path d="M24 29a7 7 0 0 0-5 12h10a7 7 0 0 0-5-12z" fill="#0a56e8" opacity="0"/><circle cx="24" cy="34" r="5.5" fill="var(--blue)"/></symbol>
+</svg>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="logo" href="../index.html" aria-label="NetPulse Maroc">
+      <svg class="logo-mark" viewBox="0 0 44 40" aria-hidden="true">
+        <rect x="2" y="24" width="8" height="14" rx="3"/><rect x="14" y="16" width="8" height="22" rx="3"/><rect x="26" y="8" width="8" height="30" rx="3"/><rect x="38" y="0" width="6" height="38" rx="3" opacity="0"/>
+      </svg>
+      <span>NetPulse <b>Maroc</b></span>
+    </a>
+    <nav class="main-nav" aria-label="Navigation principale">
+      <a href="../index.html"><svg><use href="#i-home"/></svg>Accueil</a>
+      <a href="../map.html"><svg><use href="#i-pin"/></svg>Carte</a>
+      <a class="active" href="speedtest.html"><svg><use href="#i-gauge"/></svg>Test de Vitesse</a>
+      <a href="../report/report.html"><svg><use href="#i-alert"/></svg>Signalements</a>
+      <a href="../zone.html"><svg><use href="#i-bars"/></svg>Comparatif</a>
+    </nav>
+    <button class="theme-toggle" id="themeToggle" type="button" aria-label="Changer de thème">
+      <svg class="i-moon" viewBox="0 0 24 24"><path fill="currentColor" d="M20.5 14.5A8.5 8.5 0 0 1 9.5 3.5a8.5 8.5 0 1 0 11 11z"/></svg>
+      <svg class="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4.2" fill="currentColor"/><path d="M12 2.5v2.6M12 18.9v2.6M2.5 12h2.6M18.9 12h2.6M5.3 5.3l1.8 1.8M16.9 16.9l1.8 1.8M5.3 18.7l1.8-1.8M16.9 7.1l1.8-1.8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+    </button>
+  </div>
+</header>
+
+<main>
+  <section class="container st-intro">
+    <h1>Test your <span>connection.</span></h1>
+    <p>Measure your download, upload and ping in about 20 seconds, then tell us your neighbourhood and operator to help build the community map.</p>
+  </section>
+
+  <section class="container st-grid">
+    <div class="st-card">
+      <div class="gauge">
+        <svg viewBox="0 0 300 175" role="img" aria-label="Speed gauge">
+          <defs>
+            <linearGradient id="gaugeGrad" x1="0" y1="0" x2="1" y2="0"><stop offset="0" style="stop-color:var(--blue)"/><stop offset="1" style="stop-color:var(--purple)"/></linearGradient>
+          </defs>
+          <path class="g-track" d="M30 150 A120 120 0 0 1 270 150"/>
+          <path class="g-fill" id="gFill" d="M30 150 A120 120 0 0 1 270 150"/>
+          <g id="gTicks"></g>
+        </svg>
+        <div class="g-read">
+          <div class="g-value" id="gValue">0.0</div>
+          <div class="g-unit">Mbps</div>
+          <div class="g-phase" id="gPhase" aria-live="polite">Ready</div>
+        </div>
+      </div>
+
+      <div class="st-actions">
+        <button class="btn-primary" id="startBtn" type="button">
+          <svg><use href="#i-gauge"/></svg><span id="btnText">Run Speed Test</span><svg class="arr"><use href="#i-arrow"/></svg>
+        </button>
+      </div>
+
+      <div class="metrics">
+        <div class="metric" id="boxPing"><small>Ping</small><b id="mPing">–</b><i>ms</i></div>
+        <div class="metric" id="boxJit"><small>Jitter</small><b id="mJit">–</b><i>ms</i></div>
+        <div class="metric" id="boxDown"><small>Download</small><b id="mDown">–</b><i>Mbps</i></div>
+        <div class="metric" id="boxUp"><small>Upload</small><b id="mUp">–</b><i>Mbps</i></div>
+      </div>
+
+      <div class="error" id="error" role="alert" hidden></div>
+
+      <div class="result" id="result" hidden>
+        <h3 id="resultTitle"></h3>
+        <div class="chips" id="chips"></div>
+        <p class="tip" id="resultTip"></p>
+        <p class="note" id="saveNote"></p>
+      </div>
+    </div>
+
+    <aside class="st-side">
+      <div class="st-card">
+        <h2>About your connection</h2>
+        <p class="sub">Optional, but it makes the community map useful.</p>
+        <div class="form-grid">
+          <div class="field"><label for="zone">Neighbourhood</label>
+            <select id="zone"><option value="">Choose…</option><option value="1">Hay Mohammadi</option><option value="2">Dakhla</option><option value="3">Talborjt</option></select></div>
+          <div class="field"><label for="operator">Operator</label>
+            <select id="operator"><option value="">Choose…</option><option value="maroc_telecom">Maroc Telecom</option><option value="orange">Orange</option><option value="inwi">inwi</option></select></div>
+          <div class="field"><label for="conn">Connection type</label>
+            <select id="conn"><option value="">Choose…</option><option value="fibre">Fibre</option><option value="adsl">ADSL</option><option value="4g_home">4G home router</option><option value="mobile_4g">Mobile 4G</option><option value="5g">5G</option></select></div>
+          <div class="field"><label for="path">Connected by</label>
+            <select id="path"><option value="">Not sure</option><option value="wifi">Wi-Fi</option><option value="ethernet">Network cable</option></select></div>
+        </div>
+        <p class="privacy">We never ask for your address or exact location.</p>
+      </div>
+
+      <div class="st-card">
+        <h2>What the numbers mean</h2>
+        <ul class="defs">
+          <li><b>Download:</b> how fast data reaches you (video, websites).</li>
+          <li><b>Upload:</b> how fast you send data (calls, photos).</li>
+          <li><b>Ping:</b> delay in milliseconds. Lower is better.</li>
+          <li><b>Jitter:</b> how much the ping varies. Lower means a steadier call or game.</li>
+        </ul>
+      </div>
+
+      <div class="st-card">
+        <h2>For a reliable result</h2>
+        <ol class="steps"><li>Close streaming and downloads on other devices.</li><li>Test on Wi-Fi, then again with a cable.</li><li>Test again in the evening to see peak-hour speed.</li></ol>
+      </div>
+    </aside>
+  </section>
+
+  <section class="container st-bottom">
+    <div class="st-card">
+      <div class="panel-head"><h2>My recent tests</h2><button class="link-btn" id="clearHist" type="button">Clear</button></div>
+      <p class="sub">Stored only in this browser.</p>
+      <div id="histBox"></div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div class="f-brand">
+      <svg class="logo-mark" viewBox="0 0 44 40" aria-hidden="true"><rect x="2" y="24" width="8" height="14" rx="3"/><rect x="14" y="16" width="8" height="22" rx="3"/><rect x="26" y="8" width="8" height="30" rx="3"/></svg>
+      <div><div class="f-logo">NetPulse <b>Maroc</b></div><div class="f-tag">Your Internet. Your Area. Your Insight.</div></div>
+    </div>
+    <nav class="f-nav" aria-label="Pied de page">
+      <a href="../index.html">Home</a><a href="../map.html">Map</a><a href="speedtest.html">Speed Test</a><a href="../report/report.html">Reports</a><a href="../about.html">About</a>
+    </nav>
+    <div class="f-social">
+      <a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="4" fill="currentColor"/><path d="m10 9 5 3-5 3z" fill="var(--social-bg)"/></svg></a>
+      <a href="#" aria-label="X"><svg viewBox="0 0 24 24"><path d="m5 4 14 16M19 4 5 20" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/></svg></a>
+      <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M13.5 22v-8.2h2.8l.5-3.3h-3.3V8.4c0-1 .4-1.7 1.8-1.7h1.6V3.8c-.3 0-1.3-.2-2.4-.2-2.5 0-4.2 1.5-4.2 4.2v2.7H7.5v3.3h2.8V22z"/></svg></a>
+      <a href="#" aria-label="GitHub"><svg viewBox="0 0 24 24"><path d="m8 7-5 5 5 5M16 7l5 5-5 5M13.5 5l-3 14" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+    </div>
+    <p class="f-copy">© 2026 NetPulse Maroc. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+/* Dark / light toggle: remembers the choice, defaults to the system setting */
+(function(){
+  var root=document.documentElement, btn=document.getElementById("themeToggle");
+  function isDark(){var t=root.getAttribute("data-theme");return t?t==="dark":matchMedia("(prefers-color-scheme: dark)").matches}
+  btn.addEventListener("click",function(){
+    var next=isDark()?"light":"dark";
+    root.setAttribute("data-theme",next);
+    try{localStorage.setItem("theme",next)}catch(e){}
+  });
+})();
+</script>
+<script src="speedtest.js"></script>
+</body>
+</html>
